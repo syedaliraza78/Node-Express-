@@ -45,7 +45,7 @@ const working = (req, res) => {
     res
       .status(200)
       .send({ message: "You are on the register state", data: req.body });
-    console.log("working with Get commend");
+    console.log("working with Get commend and result is shown");
   } catch (error) {
     res.status(400).send({ error: error.message, message: "Register error" });
   }

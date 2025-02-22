@@ -51,4 +51,15 @@ const working = (req, res) => {
   }
 };
 
-module.exports = { register, home, working };
+const workingtest = (req, res) => {
+  try {
+    console.log(req.body);
+    res
+      .status(200)
+      .send({ message: "You are on the register state", data: req.body });
+    console.log("working with Get commend and result is shown");
+  } catch (error) {
+    res.status(400).send({ error: error.message, message: "Register error" });
+  }
+};
+module.exports = { register, home, working, workingtest };
